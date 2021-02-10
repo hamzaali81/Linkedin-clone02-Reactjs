@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './inputOption.css';
 
 export default function inputOption({Icon, title, color}) {
     // console.log(props);
