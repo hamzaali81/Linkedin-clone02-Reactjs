@@ -1,2 +1,2 @@
 # Linkedin-clone02-Reactjs
-React + Redux + Router + firebase
+React + Redux/toolkit + Router + firebase
