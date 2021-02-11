@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './Component/Header/Header';
 import SideBar from "./Component/Sidebar/Sidebar";
 import Feed from "./Component/Feed/Feed";
-import Login from './Component/Form/Login';
+import Login from './Component/Form/Login/Login';
 import './App.css';
 
 import { selectUser } from './features/userSlice';
