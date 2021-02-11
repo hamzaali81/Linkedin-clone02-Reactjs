@@ -20,7 +20,7 @@ function Login() {
  
            <form>
                 <input value={name} onChange={(e)=>setName(e.target.value)} type="text" placeholder="Full name (required if registering)"/>
-                <input type="text"placeholder="Profile pic URL (optional)"/>
+                <input value={profilePic} onChange={(e)=>setProfilePic(e.target.value)} type="text"placeholder="Profile pic URL (optional)"/>
                 <input value={email} onChange={(e)=>setEmail(e.target.value)} type="email"placeholder="Email"/>
                 <input value={password} onChange={(e)=>setPassword(e.target.value)} type="password" placeholder="Password"/>
                 <button type="submit" onclick={loginToApp}>Sign In</button>
