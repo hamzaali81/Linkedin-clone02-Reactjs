@@ -3,10 +3,10 @@ import React from 'react'
 import './headerOption.css';
 
 
-export default function HeaderOption({avatar ,Icon, title}) {
+export default function HeaderOption({avatar ,Icon, title, onClick}) {
     // console.log(props);
     return (
-        <div className="headerOption">
+        <div onClick={onClick} className="headerOption">
             {Icon && <Icon className='headerOption__icon'/>}
             {avatar && (
                 <Avatar className="headerOption__icon" src={avatar}/>
