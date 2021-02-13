@@ -8,12 +8,13 @@ import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
 import ChatIcon from "@material-ui/icons/Chat";
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import { useDispatch,useSelector } from "react-redux";
-import { logout } from "../../features/userSlice";
+import { logout,selectUser } from "../../features/userSlice";
 import LinkedInLogo from '../../Images/linkedin.svg' 
 import HeaderOption from "../HeaderOption/HeaderOption";
 import { auth } from "../../firebase";
 
 export default function Header() {
+  const user = useSelector(selectUser);
   const dispatch = useDispatch();
 
   const logoutOfApp = ()=>{
@@ -40,7 +41,8 @@ export default function Header() {
         <HeaderOption title="Messaging" Icon={ChatIcon}/>
         <HeaderOption title="Notifications" Icon={NotificationsIcon}/>
         <HeaderOption 
-        avatar="https://media-exp1.licdn.com/dms/image/C5103AQE2DA2_TxWEmQ/profile-displayphoto-shrink_100_100/0/1571623496485?e=1618444800&v=beta&t=66QE6bp7Kb9XD_xkh1-Jr_vsYCcMFQFAQzIqk0S3CC8" 
+        // avatar={user.photoUrl}
+        avatar={true} 
         title="me"
         onClick={logoutOfApp}
         />

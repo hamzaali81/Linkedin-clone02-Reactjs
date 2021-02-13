@@ -2,6 +2,8 @@ import React,{ useState, useEffect } from "react";
 import "./feed.css";
 import InputOption from '../InputOption/inputOption';
 import Post from './../Post/Post';
+import { useSelector } from "react-redux";
+import { selectUser } from '../../features/userSlice';
 
 import CreateIcon from "@material-ui/icons/Create";
 import ImageIcon from '@material-ui/icons/Image';
@@ -13,6 +15,8 @@ import firebase from 'firebase';
 
 
 export default function Feed() {
+  const user = useSelector(selectUser);
+
   const [input, setInput] = useState('');
   const [posts, setPosts] = useState([]);
   
@@ -34,10 +38,10 @@ export default function Feed() {
   console.log(e);
 
   db.collection("posts").add({
-    name: 'Hamza Ali',
-    description: 'this is a test',
+    name: user.displayName,
+    description: user.email,
     message: input,
-    photoUrl: '',
+    photoUrl: user.photoUrl || '',
     timestamp: firebase.firestore.FieldValue.serverTimestamp()
   })
   setInput("");
