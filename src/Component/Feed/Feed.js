@@ -12,6 +12,7 @@ import EventIcon from '@material-ui/icons/Event';
 import CalendarViewDayIcon from '@material-ui/icons/CalendarViewDay';
 import { db,storage } from "./../../firebase";
 import firebase from 'firebase';
+import FlipMove from "react-flip-move";
 
 
 export default function Feed() {
@@ -67,7 +68,18 @@ export default function Feed() {
     </div>
    
    {/* {Post} */}
-   {
+   {/* {
+     posts.map(({id, data: {name, description, message, photoUrl}})=> (
+     <Post 
+     key={id}
+     name={name}
+     description={description}
+     message={message}
+     photoUrl={photoUrl}
+      />
+     ))} */}
+ <FlipMove>
+ {
      posts.map(({id, data: {name, description, message, photoUrl}})=> (
      <Post 
      key={id}
@@ -77,6 +89,8 @@ export default function Feed() {
      photoUrl={photoUrl}
       />
      ))}
+ </FlipMove>
+
    {/* <Post 
    name="Hamza Ali" 
    description="This is a test" 
