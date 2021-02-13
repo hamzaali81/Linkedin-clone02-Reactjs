@@ -1,13 +1,13 @@
 import React from 'react';
 import './widget.css';
-import InfoIcon from 'material-ui/icons/Infos';
-import { FiberManualRecord } from '@material-ui/icons';
+import InfoIcon from '@material-ui/icons/Info';
+import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 
-function widget() {
+function Widgets() {
     const newsArticle = (heading, subtitle) => (
         <div className="widgets__article">
             <div className="widgets__articleLeft">
-                <FiberManualRecord />
+                <FiberManualRecordIcon />
             </div>
             <div className="widgets__articleRight">
 
@@ -28,11 +28,12 @@ function widget() {
             </div>
             {newsArticle('React new version launch')}
             {newsArticle('AI diminant in world new order')}
-            {newsArticle('React new version launch')}
-            {newsArticle('React new version launch')}
-            {newsArticle('React new version launch')}
+            {newsArticle('Blockchain side effects in new traders.')}
+            {newsArticle('Reactnative vs flutter')}
+            {newsArticle('React vs Angular vs Vue = nodejs vs deno vs django')}
         </div>
     )
 }
 
-export default widget
+export default Widgets;
+

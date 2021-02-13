@@ -5,7 +5,7 @@ import React, {forwardRef } from 'react';
 import InputOption from './../InputOption/inputOption';
 import './post.css';
 
- const Post= forwardRef(({name, description, message , photoUrl})=> {
+ const Post= forwardRef(({name, description, message , photoUrl}, ref)=> {
  
     return (
         <div ref={ref} className="post">
